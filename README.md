@@ -13,7 +13,7 @@
 The air quality sensor takes several hundred measurements per hour, which are then averaged and sent to a server.
 The sensors take measurements of PM10, PM2.5, PM1 dust. They also contain data from which the pressure and humidity of the air is calculated.
 
-![logo](meassurement-photo.png)
+<a href="https://szpek.pl">![logo](meassurement-photo.png?raw=true)</a>
 
 
 ## Features
@@ -25,7 +25,7 @@ The sensors take measurements of PM10, PM2.5, PM1 dust. They also contain data f
 * **User panel** - managing your sensor, access to data from historical meassurements
 
 
-## Getting started / Docker compose
+## Getting started
 TODO: create docker compose
 might environment variables be needed
 
