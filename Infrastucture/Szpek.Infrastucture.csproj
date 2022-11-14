@@ -1,0 +1,93 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20190528153217_AddUniqueIndexToCode.cs" />
+    <Compile Remove="Migrations\20190528153217_AddUniqueIndexToCode.Designer.cs" />
+    <Compile Remove="Migrations\20190602104004_AddLocationAndMeassurements.cs" />
+    <Compile Remove="Migrations\20190602104004_AddLocationAndMeassurements.Designer.cs" />
+    <Compile Remove="Migrations\20190603122034_AddSensorOwner.cs" />
+    <Compile Remove="Migrations\20190603122034_AddSensorOwner.Designer.cs" />
+    <Compile Remove="Migrations\20190606140725_SetAddressCountryCodeLength.cs" />
+    <Compile Remove="Migrations\20190606140725_SetAddressCountryCodeLength.Designer.cs" />
+    <Compile Remove="Migrations\20190624192653_Extend-Address.cs" />
+    <Compile Remove="Migrations\20190624192653_Extend-Address.Designer.cs" />
+    <Compile Remove="Migrations\20190625103532_AirQualityMeassurementProperties.cs" />
+    <Compile Remove="Migrations\20190625103532_AirQualityMeassurementProperties.Designer.cs" />
+    <Compile Remove="Migrations\20190625111325_AirQualityLevelProperties.cs" />
+    <Compile Remove="Migrations\20190625111325_AirQualityLevelProperties.Designer.cs" />
+    <Compile Remove="Migrations\20190625111608_AirQualityLevelProperties.cs" />
+    <Compile Remove="Migrations\20190625111608_AirQualityLevelProperties.Designer.cs" />
+    <Compile Remove="Migrations\20190625114542_AirQualityLevelProperties.cs" />
+    <Compile Remove="Migrations\20190625114542_AirQualityLevelProperties.Designer.cs" />
+    <Compile Remove="Migrations\20190625135031_AirQualityLevelProperties.cs" />
+    <Compile Remove="Migrations\20190625135031_AirQualityLevelProperties.Designer.cs" />
+    <Compile Remove="Migrations\20190628093432_AddUserEntity.cs" />
+    <Compile Remove="Migrations\20190628093432_AddUserEntity.Designer.cs" />
+    <Compile Remove="Migrations\20190628130709_FixSeedingData.cs" />
+    <Compile Remove="Migrations\20190628130709_FixSeedingData.Designer.cs" />
+    <Compile Remove="Migrations\20190628131545_AddMicrosoftUser.cs" />
+    <Compile Remove="Migrations\20190628131545_AddMicrosoftUser.Designer.cs" />
+    <Compile Remove="Migrations\20190628132120_AddMicrosoftUser.cs" />
+    <Compile Remove="Migrations\20190628132120_AddMicrosoftUser.Designer.cs" />
+    <Compile Remove="Migrations\20190628173828_ExtendMicrosoftUser.cs" />
+    <Compile Remove="Migrations\20190628173828_ExtendMicrosoftUser.Designer.cs" />
+    <Compile Remove="Migrations\20190628175133_AddExtendedMicrosoftUser.cs" />
+    <Compile Remove="Migrations\20190628175133_AddExtendedMicrosoftUser.Designer.cs" />
+    <Compile Remove="Migrations\20190628175658_AddExtendedMicrosoftUser.cs" />
+    <Compile Remove="Migrations\20190628175658_AddExtendedMicrosoftUser.Designer.cs" />
+    <Compile Remove="Migrations\20190628180714_AddExtendedMicrosoftUser.cs" />
+    <Compile Remove="Migrations\20190628180714_AddExtendedMicrosoftUser.Designer.cs" />
+    <Compile Remove="Migrations\20190628180937_AddExtendedMicrosoftUser.cs" />
+    <Compile Remove="Migrations\20190628180937_AddExtendedMicrosoftUser.Designer.cs" />
+    <Compile Remove="Migrations\20190629175314_SplitToAuthUserAndBusinessUser.cs" />
+    <Compile Remove="Migrations\20190629175314_SplitToAuthUserAndBusinessUser.Designer.cs" />
+    <Compile Remove="Migrations\20190629180544_AddIdentityUser.cs" />
+    <Compile Remove="Migrations\20190629180544_AddIdentityUser.Designer.cs" />
+    <Compile Remove="Migrations\20190703175340_AddSensorPubKey.cs" />
+    <Compile Remove="Migrations\20190703175340_AddSensorPubKey.Designer.cs" />
+    <Compile Remove="Migrations\20190703180540_AddSensorPubKey.cs" />
+    <Compile Remove="Migrations\20190703180540_AddSensorPubKey.Designer.cs" />
+    <Compile Remove="Migrations\20190703184806_AddSensorPubKey.cs" />
+    <Compile Remove="Migrations\20190703184806_AddSensorPubKey.Designer.cs" />
+    <Compile Remove="Migrations\20190703185037_AddSensorPubKey.cs" />
+    <Compile Remove="Migrations\20190703185037_AddSensorPubKey.Designer.cs" />
+    <Compile Remove="Migrations\20190703185307_AddSensorPubKey.cs" />
+    <Compile Remove="Migrations\20190703185307_AddSensorPubKey.Designer.cs" />
+    <Compile Remove="Migrations\20190703185536_AddSensorPubKey.cs" />
+    <Compile Remove="Migrations\20190703185536_AddSensorPubKey.Designer.cs" />
+    <Compile Remove="Migrations\20190703185810_AddSensorPubKey.cs" />
+    <Compile Remove="Migrations\20190703185810_AddSensorPubKey.Designer.cs" />
+    <Compile Remove="Migrations\20190719193313_MakeSensorFieldsNotNull.cs" />
+    <Compile Remove="Migrations\20190719193313_MakeSensorFieldsNotNull.Designer.cs" />
+    <Compile Remove="Migrations\20190719193337_MakeSensorOwnerFieldsNotNull.cs" />
+    <Compile Remove="Migrations\20190719193337_MakeSensorOwnerFieldsNotNull.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MailKit" Version="2.6.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="3.1.3" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SzpekCore\Szpek.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore">
+      <HintPath>C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.aspnetcore.identity.entityframeworkcore\2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore">
+      <HintPath>C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.entityframeworkcore\2.2.0\lib\netstandard2.0\Microsoft.EntityFrameworkCore.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
