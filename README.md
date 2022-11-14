@@ -15,6 +15,7 @@ The sensors take measurements of PM10, PM2.5, PM1 dust. They also contain data f
 
 <a href="https://szpek.pl">![logo](meassurement-photo.png?raw=true)</a>
 
+**Website:** https://szpek.pl
 
 ## Features
 
