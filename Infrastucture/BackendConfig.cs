@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Szpek.Api
+namespace Szpek.Infrastructure
 {
     public static class BackendConfig
     {
@@ -12,5 +12,8 @@ namespace Szpek.Api
 
         public static string AdminEmail = Environment.GetEnvironmentVariable("szpek_adminMail");
 
+        public static string NoreplyEmail = Environment.GetEnvironmentVariable("szpek_noreplyMail");
+
+        public static string NoreplyEmailPassword = Environment.GetEnvironmentVariable("szpek_noreplyMailPassword");
     }
 }

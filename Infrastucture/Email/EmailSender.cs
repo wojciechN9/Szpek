@@ -10,7 +10,7 @@ namespace Szpek.Infrastructure.Email
         public async Task SendEmailAsync(string email, string subject, string htmlMessage)
         {
             var message = new MimeMessage();
-            message.From.Add(new MailboxAddress("Szpek.pl", "noreply@szpek.pl"));
+            message.From.Add(new MailboxAddress("Szpek.pl", BackendConfig.NoreplyEmail));
             message.To.Add(new MailboxAddress(email));
             message.Subject = subject;
             message.Body = new TextPart("html")
@@ -25,9 +25,8 @@ namespace Szpek.Infrastructure.Email
                     //SSL not working 
                     //await client.ConnectAsync("smtp.szpek.pl", 465, true);
 
-                    //move to app.Settings
                     await client.ConnectAsync("smtp.szpek.pl", 587, MailKit.Security.SecureSocketOptions.None);
-                    await client.AuthenticateAsync("noreply@szpek.pl", "szpekPOLEX1!");
+                    await client.AuthenticateAsync(BackendConfig.NoreplyEmail, BackendConfig.NoreplyEmailPassword);
                     await client.SendAsync(message);
                     await client.DisconnectAsync(true);
                 };
