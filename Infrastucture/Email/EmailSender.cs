@@ -11,7 +11,7 @@ namespace Szpek.Infrastructure.Email
         {
             var message = new MimeMessage();
             message.From.Add(new MailboxAddress("Szpek.pl", "noreply@szpek.pl"));
-            message.To.Add(new MailboxAddress(email));
+            message.To.Add(new MailboxAddress("Customer", email));
             message.Subject = subject;
             message.Body = new TextPart("html")
             {
