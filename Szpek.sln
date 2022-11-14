@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.28803.452
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Szpek.Api", "Api\Szpek.Api.csproj", "{D8DD40EA-9CD9-43D2-8BE1-5409178B013F}"
 EndProject
@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Szpek.CoreUnitTests", "Szpe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Szpek.IntegrationTests", "Szpek.IntegrationTests\Szpek.IntegrationTests.csproj", "{79F09D6C-8E44-4241-BC74-0A5E5FFF38A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Szpek.ApiUnitTests", "Szpek.ApiUnitTests\Szpek.ApiUnitTests.csproj", "{F259C16B-1724-4A43-BA7F-2A45D0F44621}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Szpek.ApiUnitTests", "Szpek.ApiUnitTests\Szpek.ApiUnitTests.csproj", "{F259C16B-1724-4A43-BA7F-2A45D0F44621}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
