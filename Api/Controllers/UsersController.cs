@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Szpek.Api.Mappings;
 using Szpek.Application.User;
 using Szpek.Core.Models;
+using Szpek.Infrastructure;
 using Szpek.Infrastructure.Authorization;
 using Szpek.Infrastructure.Email;
 

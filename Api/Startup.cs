@@ -17,6 +17,7 @@ using Szpek.Api.Middleware;
 using Szpek.Core.Interfaces;
 using Szpek.Core.Models;
 using Szpek.Data.Repositories;
+using Szpek.Infrastructure;
 using Szpek.Infrastructure.Authorization;
 using Szpek.Infrastructure.Email;
 using Szpek.Infrastructure.Models.Context;
