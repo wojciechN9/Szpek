@@ -27,6 +27,6 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
     - name: Publish
-      run: dotnet publish Szpek.Api.dll -c Release -o output 
+      run: dotnet publish Api -c Release -o output 
 
       
