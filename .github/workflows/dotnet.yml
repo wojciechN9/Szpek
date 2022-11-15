@@ -3,11 +3,13 @@
 
 name: .NET
 
-on: workflow_dispatch
-  #push:
-   # branches: [ "actions-tests" ]
-  #pull_request:
-  #  branches: [ "actions-tests" ]
+on:
+  push:
+    branches: [ "actions-tests" ]
+  pull_request:
+    branches: [ "actions-tests" ]
+  workflow_dispatch:
+    
 
 jobs:
   build:
