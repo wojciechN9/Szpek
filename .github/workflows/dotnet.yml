@@ -4,10 +4,11 @@
 name: .NET
 
 on:
-  push:
-    branches: [ "actions-tests" ]
-  pull_request:
-    branches: [ "actions-tests" ]
+  on: workflow_dispatch
+  #push:
+   # branches: [ "actions-tests" ]
+  #pull_request:
+  #  branches: [ "actions-tests" ]
 
 jobs:
   build:
