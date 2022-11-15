@@ -1,6 +1,6 @@
 on: 
   release:
-
+    #types: [published]
 jobs:
   release-info:
     runs-on: ubuntu-latest
@@ -26,8 +26,8 @@ jobs:
       run: dotnet test --no-build --verbosity normal
     - name: Publish 
       env:
-          release-version: ${{ github.event.release.tag_name }}
-      run: dotnet publish Api -p:Version="$release-version" -c Release -o output 
+          rel-version: ${{ github.event.release.tag_name }}
+      run: dotnet publish Api -p:Version="$rel-version" -c Release -o output 
     - name: Export App
       uses: actions/upload-artifact@v3
       with:
