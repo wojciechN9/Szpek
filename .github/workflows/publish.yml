@@ -1,4 +1,5 @@
 on: 
+  release:
   workflow_dispatch:
     inputs:
       logLevel:
