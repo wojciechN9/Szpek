@@ -26,8 +26,18 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
+    - name: test
+      env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+      run: echo "$GITHUB_CONTEXT"
+    - name: test2
+      run: echo ${{ toJson(github) }}
+    - name: test3
+      env:
+          eee: ${{ github.event.release.tag_name }}
+      run: echo "$eee"
     - name: Publish 
-      run: dotnet publish Api -p:Version= ${{ github.event.name }} -c Release -o output 
+      run: dotnet publish Api -p:Version=  -c Release -o output 
     - name: Export App
       uses: actions/upload-artifact@v3
       with:
