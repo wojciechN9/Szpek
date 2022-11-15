@@ -1,10 +1,10 @@
 # [Szpek](https://szpek.pl/) 
-[![GitHub release](https://img.shields.io/github/release-date/wojciechN9/Szpek)](https://github.com/wojciechN9/Szpek) 
+[![GitHub publish-workflow-status](https://github.com/wojciechN9/Szpek/actions/workflows/publish.yml/badge.svg)](https://github.com/wojciechN9/Szpek/actions/workflows/publish.yml/)
+[![GitHub release-date](https://img.shields.io/github/release-date/wojciechN9/Szpek)](https://github.com/wojciechN9/Szpek) 
 [![GitHub release](https://img.shields.io/github/v/release/wojciechN9/Szpek)](https://github.com/wojciechN9/Szpek) 
 [![GitHub stars](https://img.shields.io/github/stars/wojciechN9/Szpek)](https://github.com/wojciechN9/Szpek/stargazers)
 
-<!-- TODO add badges after creating git pipeline: .net, test coverage (integration, unit),  
-.net version-->
+<!-- TODO add badges after creating git pipeline: .net, test coverage (integration, unit) -->
 
 
 
