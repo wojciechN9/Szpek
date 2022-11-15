@@ -28,5 +28,10 @@ jobs:
       run: dotnet test --no-build --verbosity normal
     - name: Publish
       run: dotnet publish Api -c Release -o output 
+    - name: Export App
+      uses: actions/upload-artifact@v3
+      with:
+        name: szpek-app
+        path: output
 
       
