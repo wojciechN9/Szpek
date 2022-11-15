@@ -1,18 +1,37 @@
+name: publish app
+
 on: 
-  workflow_dispatch:
-    inputs:
-      logLevel:
-        description: 'Log level'     
-        required: true
-        default: 'warning'
-      tags:
-        description: 'Test scenario tags'  
-        
+  release:
+    types: [published]
 jobs:
-  printInputs:
+  release-info:
     runs-on: ubuntu-latest
     steps:
     - run: |
-        echo "Log level: ${{ github.event.inputs.logLevel }}"
-        echo "Tags: ${{ github.event.inputs.tags }}" 
-        echo "AAAA: ${{ github.event.release.tag_name }}"
+        echo "Release version: ${{ github.event.release.tag_name }}"
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 6.0.x
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --no-restore
+    - name: Test
+      run: dotnet test --no-build --verbosity normal
+    - name: Publish 
+      env:
+          rel_version: ${{ github.event.release.tag_name }}
+      run: dotnet publish Api -p:Version="$rel_version" -c Release -o output 
+    - name: Export to artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: szpek-v-${{ github.event.release.tag_name }}
+        path: output
