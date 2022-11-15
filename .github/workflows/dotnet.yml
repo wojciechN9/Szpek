@@ -27,11 +27,11 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
     - name: Publish 
-      run: dotnet publish Api -c Release -o output 
+      run: dotnet publish Api -p:Version=${{ github.event.release.tag_name }} -c Release -o output 
     - name: Export App
       uses: actions/upload-artifact@v3
       with:
-        name: szpek-app-${{ github.event.release.tag_name }}
+        name: szpek-app-v- ${{ github.event.release.tag_name }}
         path: output
 
       
