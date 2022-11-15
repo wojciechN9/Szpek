@@ -7,7 +7,7 @@ on:
         default: 'warning'
       tags:
         description: 'Test scenario tags'  
-        
+
 jobs:
   printInputs:
     runs-on: ubuntu-latest
@@ -16,3 +16,37 @@ jobs:
         echo "Log level: ${{ github.event.inputs.logLevel }}"
         echo "Tags: ${{ github.event.inputs.tags }}" 
         echo "AAAA: ${{ github.event.release.tag_name }}"
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 6.0.x
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --no-restore
+    - name: Test
+      run: dotnet test --no-build --verbosity normal
+    - name: test
+      env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+      run: echo "$GITHUB_CONTEXT"
+    - name: test2
+      run: echo ${{ toJson(github) }}
+    - name: test3
+      env:
+          eee: ${{ github.event.release.tag_name }}
+      run: echo "$eee"
+    - name: Publish 
+      run: dotnet publish Api -p:Version=  -c Release -o output 
+    - name: Export App
+      uses: actions/upload-artifact@v3
+      with:
+        name: szpek-app-v- ${{ github.event.release.tag_name }}
+        path: output
