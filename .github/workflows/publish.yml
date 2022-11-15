@@ -1,22 +1,12 @@
 on: 
   release:
-  workflow_dispatch:
-    inputs:
-      logLevel:
-        description: 'Log level'     
-        required: true
-        default: 'warning'
-      tags:
-        description: 'Test scenario tags'  
 
 jobs:
-  printInputs:
+  release-info:
     runs-on: ubuntu-latest
     steps:
     - run: |
-        echo "Log level: ${{ github.event.inputs.logLevel }}"
-        echo "Tags: ${{ github.event.inputs.tags }}" 
-        echo "AAAA: ${{ github.event.release.tag_name }}"
+        echo "Release version: ${{ github.event.release.tag_name }}"
 
   build:
 
@@ -34,12 +24,6 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
-    - name: test
-      env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
-      run: echo "$GITHUB_CONTEXT"
-    - name: test3
-      run: echo "$eee"
     - name: Publish 
       env:
           release-version: ${{ github.event.release.tag_name }}
@@ -47,5 +31,5 @@ jobs:
     - name: Export App
       uses: actions/upload-artifact@v3
       with:
-        name: szpek-app-v- ${{ github.event.release.tag_name }}
+        name: szpek-v-${{ github.event.release.tag_name }}
         path: output
