@@ -26,8 +26,8 @@ jobs:
       run: dotnet test --no-build --verbosity normal
     - name: Publish 
       env:
-          rel-version: ${{ github.event.release.tag_name }}
-      run: dotnet publish Api -p:Version="$rel-version" -c Release -o output 
+          rel_version: ${{ github.event.release.tag_name }}
+      run: dotnet publish Api -p:Version="$rel_version" -c Release -o output 
     - name: Export App
       uses: actions/upload-artifact@v3
       with:
