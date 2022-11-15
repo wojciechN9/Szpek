@@ -10,8 +10,10 @@ namespace Szpek.Infrastructure.Email
         public async Task SendEmailAsync(string email, string subject, string htmlMessage)
         {
             var message = new MimeMessage();
+
             message.From.Add(new MailboxAddress("Szpek.pl", BackendConfig.NoreplyEmail));
-            message.To.Add(new MailboxAddress(email));
+            message.To.Add(new MailboxAddress("Customer", email));
+
             message.Subject = subject;
             message.Body = new TextPart("html")
             {

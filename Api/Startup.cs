@@ -86,7 +86,7 @@ namespace Szpek.Api
             });
 
             services.AddDbContext<SzpekContext>(opt =>
-                opt.UseMySql(BackendConfig.DBConnectionString));
+                opt.UseMySql(BackendConfig.DBConnectionString, ServerVersion.AutoDetect(BackendConfig.DBConnectionString)));
 
             services.AddControllers();
 
