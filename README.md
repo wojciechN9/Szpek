@@ -26,7 +26,7 @@ The sensors take measurements of PM10, PM2.5, PM1 dust. They also contain data f
 * **User panel** - managing your sensor, access to data from historical meassurements
 
 ## How it looks
-| ![logo](Assets/szpek.jpg?raw=true) | 
+| ![logo](Assets/sensor.jpg?raw=true) | 
 |:--:| 
 | *Sensor in operation* |
 
