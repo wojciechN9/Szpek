@@ -9,15 +9,15 @@ namespace Szpek.Infrastucture.Migrations
             migrationBuilder.Sql(
                 //on server table has Measurement name - idk why there is such a diference
                 @"
-                    INSERT INTO measurement (LocationId, SmogMeasurementId) 
-                    SELECT LocationId, Id FROM smogmeassurement ORDER BY Id;
+                    INSERT INTO Measurement (LocationId, SmogMeasurementId) 
+                    SELECT LocationId, Id FROM SmogMeassurement ORDER BY Id;
                 ");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.Sql(
-            "TRUNCATE TABLE measurement;");
+            "TRUNCATE TABLE Measurement;");
         }
     }
 }
