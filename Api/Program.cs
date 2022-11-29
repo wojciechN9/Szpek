@@ -1,11 +1,16 @@
 ﻿using System;
+using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Serilog;
 using Serilog.Events;
+using Szpek.Infrastructure.Models.Context;
 
 namespace Szpek.Api
 {
@@ -28,7 +33,10 @@ namespace Szpek.Api
             {
                 var appVersion = Assembly.GetExecutingAssembly().GetName().Version.ToString();
                 Log.Information($"Szpek app started, version: {appVersion}");
-                CreateWebHostBuilder(args).Build().Run();
+                var host = CreateHostBuilder(args).Build();
+                MigrateDatabase(host);
+                host.Run();
+
                 return 0;
             }
             catch (Exception ex)
@@ -41,14 +49,28 @@ namespace Szpek.Api
                 Log.CloseAndFlush();
             }
         }
-        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-        WebHost.CreateDefaultBuilder(args)
-            .UseStartup<Startup>()
-            .ConfigureLogging(logging =>
+
+        private static void MigrateDatabase(IHost host)
+        {
+            using (var scope = host.Services.CreateScope())
             {
-                logging.ClearProviders();
-            })
-            .UseSerilog();
+                var dbContext = scope.ServiceProvider.GetRequiredService<SzpekContext>();
+
+                Log.Information($"Looking for ef DB migrations");
+                if (dbContext.Database.GetPendingMigrations().Any())
+                {
+                    dbContext.Database.Migrate();
+                    Log.Information($"DB migrated successfully");
+                }
+            }
+        }
+
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+            Host.CreateDefaultBuilder(args)
+       .ConfigureWebHostDefaults(webBuilder =>
+       {
+           webBuilder.UseStartup<Startup>();
+       }).UseSerilog();
 
         public static string GetLogsPath()
         {
