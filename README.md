@@ -48,3 +48,4 @@ Szpek is an open source project and you are welcome to participate - just let us
 Szpek is released under the [The Commons Clause License](https://github.com/wojciechN9/Szpek/blob/master/LICENSE).
 
 **Project created by Wojciech Nastaj**
+**Sensor designed and manufactured by Szymon Katra** 
