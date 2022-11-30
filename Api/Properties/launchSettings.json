@@ -1,8 +1,8 @@
-﻿{
+{
   "$schema": "http://json.schemastore.org/launchsettings.json",
   "iisSettings": {
-    "windowsAuthentication": false, 
-    "anonymousAuthentication": true, 
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
     "iisExpress": {
       "applicationUrl": "http://localhost:63385",
       "sslPort": 44319
@@ -21,10 +21,25 @@
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "api/",
-      "applicationUrl": "https://localhost:5001;http://localhost:5000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      }
+      },
+      "applicationUrl": "https://localhost:5001;http://localhost:5000"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/api/",
+      "environmentVariables": {
+        "szpek_dbConnectionString": "Server=db;Database=szpek;Uid=root;Pwd=aaaa",
+        "szpek_adminPassword": "dddd eeeee!",
+        "szpek_adminMail": "aaaa@bbbb.com",
+        "szpek_noreplyMail": "noreply@szpek.pl",
+        "szpek_noreplyMailPassword": "ble ble ble ble",
+        "szpek_jwtSecret": "bbbbb cccccc"
+      },
+      "publishAllPorts": true,
+      "useSSL": true
     }
   }
 }

@@ -10,12 +10,12 @@ namespace Szpek.Infrastucture.Migrations
              //on server table has Address name - idk why there is such a diference
              @"
                     SET SQL_SAFE_UPDATES = 0;
-                    UPDATE address SET Height = 164 WHERE City = 'Michów' AND Street = 'Szkolna';
-                    UPDATE address SET Height = 200 WHERE City = 'Lublin' AND Street = 'Poligonowa';
-                    UPDATE address SET Height = 110 WHERE City = 'Warszawa' AND Street = 'Służby Polsce';
-                    UPDATE address SET Height = 245 WHERE City = 'Chmielnik' AND Street = 'Piastów';
-                    UPDATE address SET Height = 215 WHERE City = 'Lublin' AND Street = 'Godebskiego';
-                    UPDATE address SET Height = 133 WHERE City = 'Naumivka' AND Street = 'Sadova';
+                    UPDATE Address SET Height = 164 WHERE City = 'Michów' AND Street = 'Szkolna';
+                    UPDATE Address SET Height = 200 WHERE City = 'Lublin' AND Street = 'Poligonowa';
+                    UPDATE Address SET Height = 110 WHERE City = 'Warszawa' AND Street = 'Służby Polsce';
+                    UPDATE Address SET Height = 245 WHERE City = 'Chmielnik' AND Street = 'Piastów';
+                    UPDATE Address SET Height = 215 WHERE City = 'Lublin' AND Street = 'Godebskiego';
+                    UPDATE Address SET Height = 133 WHERE City = 'Naumivka' AND Street = 'Sadova';
                     SET SQL_SAFE_UPDATES = 1;
                 ");
         }

@@ -145,14 +145,14 @@ namespace Szpek.Api
             app.UseAuthentication();
             app.UseAuthorization();
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection(); -done by nginx
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller}/{action=Index}/{id?}");
-            });        
+            });
         }
 
         private async Task CreateAdminAndRoles(IServiceProvider serviceProvider)
