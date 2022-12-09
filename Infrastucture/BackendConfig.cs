@@ -12,6 +12,8 @@ namespace Szpek.Infrastructure
 
         public static string AdminEmail = Environment.GetEnvironmentVariable("szpek_adminMail");
 
+        public static string NoreplyEmailProvider = Environment.GetEnvironmentVariable("szpek_noreplyMailProvider");
+
         public static string NoreplyEmail = Environment.GetEnvironmentVariable("szpek_noreplyMail");
 
         public static string NoreplyEmailPassword = Environment.GetEnvironmentVariable("szpek_noreplyMailPassword");
