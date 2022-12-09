@@ -23,11 +23,8 @@ namespace Szpek.Infrastructure.Email
             try
             {
                 using (var client = new SmtpClient())
-                {
-                    //SSL not working 
-                    //await client.ConnectAsync("smtp.szpek.pl", 465, true);
-
-                    await client.ConnectAsync("smtp.szpek.pl", 587, MailKit.Security.SecureSocketOptions.None);
+                {                    
+                    await client.ConnectAsync(BackendConfig.NoreplyEmailProvider, 465, true);
                     await client.AuthenticateAsync(BackendConfig.NoreplyEmail, BackendConfig.NoreplyEmailPassword);
                     await client.SendAsync(message);
                     await client.DisconnectAsync(true);
