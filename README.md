@@ -30,10 +30,6 @@ The sensors take measurements of PM10, PM2.5, PM1 dust. They also contain data f
 |:--:| 
 | *Sensor in operation* |
 
-## Getting started
-TODO: create docker compose
-might environment variables be needed
-
 ## API
 
 * [Szpek Swagger API](https://api.szpek.pl/api/)
@@ -42,6 +38,14 @@ might environment variables be needed
 ## Contributing 
 
 Szpek is an open source project and you are welcome to participate - just let us know or create a pull requests.
+
+It uses Docker Compose as a containerization solution therefore all the infrastructure is already established so you don't have to worry about it.
+
+You just need to:
+* Install [Docker](https://docs.docker.com/get-docker/)
+* Clone this backend repo and [UI](https://github.com/wojciechN9/Szpek-UI)
+* Run `docker-compose up` command for both backend and UI repos
+* Open `localhost:4200` ...and voilla - app is working :) 
 
 ## License
 
