@@ -38,6 +38,7 @@ The sensors take measurements of PM10, PM2.5, PM1 dust. They also contain data f
 
 * [Szpek Swagger API](https://api.szpek.pl/api/)
 * [Szpek UI APP](https://github.com/wojciechN9/Szpek-UI)
+* [Sensor Firmware](https://github.com/SzymonKatra/SzpekESP32)
 
 ## Contributing 
 
