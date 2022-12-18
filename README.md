@@ -34,7 +34,7 @@ The sensors take measurements of PM10, PM2.5, PM1 dust. They also contain data f
 |:--:| 
 | *Sensor in operation* |
 
-Repository containing sensor device firmware: https://github.com/SzymonKatra/SzpekESP32
+Repository containing sensor device design and firmware: https://github.com/SzymonKatra/SzpekESP32
 
 ## API
 
