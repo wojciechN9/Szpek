@@ -34,6 +34,8 @@ The sensors take measurements of PM10, PM2.5, PM1 dust. They also contain data f
 |:--:| 
 | *Sensor in operation* |
 
+Repository containing sensor device firmware: https://github.com/SzymonKatra/SzpekESP32
+
 ## API
 
 * [Szpek Swagger API](https://api.szpek.pl/api/)
@@ -55,6 +57,6 @@ You just need to:
 
 Szpek is released under the [The Commons Clause License](https://github.com/wojciechN9/Szpek/blob/master/LICENSE).
 
-**Sensor designed and manufactured by Szymon Katra** 
+**Sensor designed and manufactured by [Szymon Katra](https://github.com/SzymonKatra)** 
 
 **Project created by Wojciech Nastaj**
