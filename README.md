@@ -57,4 +57,4 @@ Szpek is released under the [The Commons Clause License](https://github.com/wojc
 
 **Sensor designed and manufactured by [Szymon Katra](https://github.com/SzymonKatra)** 
 
-**Project created by Wojciech Nastaj**
+**Project created by [Wojciech Nastaj](https://github.com/wojciechN9/)**
