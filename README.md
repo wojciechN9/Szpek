@@ -56,6 +56,6 @@ You just need to:
 
 Szpek is released under the [The Commons Clause License](https://github.com/wojciechN9/Szpek/blob/master/LICENSE).
 
-**Sensor designed and manufactured by Szymon Katra** 
+**Sensor designed and manufactured by [Szymon Katra](https://github.com/SzymonKatra)** 
 
-**Project created by Wojciech Nastaj**
+**Project created by [Wojciech Nastaj](https://github.com/wojciechN9/)**
